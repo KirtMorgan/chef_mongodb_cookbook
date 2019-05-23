@@ -12,10 +12,10 @@ Our Mongo cookbook currently only install mongodb but it is not configured or st
 
 Add new ChefSpec tests for the following:
 
-* Create a mongod.conf file in /etc/mongod.conf - TEST COMPLETE
-* Create a mongod.service file in /lib/systemd/system/mongod.service - TEST COMPLETE
-* MongoDB service should be enabled - TEST COMPLETE
-* MongoDB service should be started - TEST COMPLETE
+* Create a mongod.conf file in /etc/mongod.conf - TEST COMPLETE + PASSING
+* Create a mongod.service file in /lib/systemd/system/mongod.service - TEST COMPLETE + PASSING
+* MongoDB service should be enabled - TEST COMPLETE + PASSING
+* MongoDB service should be started - TEST COMPLETE + PASSING
 
 And InSpec tests for the following:
 

@@ -7,6 +7,16 @@ apt_update 'update' do
   action :update
 end
 
+package 'mongodb-org' do
+  action :upgrade
+end
+
+service 'mongod' do
+  supports status: true, restart: true, reload: true
+  action [:enable, :start]
+
+end
+
 apt_repository 'mongodb-org' do
     uri "http://repo.mongodb.org/apt/ubuntu"
     distribution "xenial/mongodb-org/3.2"
@@ -15,6 +25,12 @@ apt_repository 'mongodb-org' do
     key "EA312927"
 end
 
-package 'mongodb-org' do
-  action :upgrade
+template '/etc/mongod.conf' do
+  source 'mongod.conf.erb'
+  notifies :restart, 'service[mongod]'
+end
+
+template '/lib/systemd/system/mongod.service' do
+  source '/lib/systemd/system/mongod.service'
+  notifies :restart, 'service[mongod]'
 end
