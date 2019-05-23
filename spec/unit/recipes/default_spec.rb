@@ -19,11 +19,9 @@ describe 'mongodb::default' do
       expect { chef_run }.to_not raise_error
     end
 
-
     it 'update all sources' do
       expect(chef_run).to update_apt_update('update')
     end
-
 
     it 'should add mongo to the sources list' do
       expect(chef_run).to add_apt_repository('mongodb-org')
@@ -39,6 +37,14 @@ describe 'mongodb::default' do
 
     it 'should create a mongod.service template in /lib/systemd/system/mongod.service' do
       expect(chef_run).to create_template("/lib/systemd/system/mongod.service")
+    end
+
+    it 'should enable the mongod service' do
+      expect(chef_run).to enable_service 'mongod'
+    end
+
+    it 'should start the mongod service' do
+      expect(chef_run).to start_service 'mongod'
     end
 
   end
