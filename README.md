@@ -19,10 +19,10 @@ Add new ChefSpec tests for the following:
 
 And InSpec tests for the following:
 
-* MongoDB is running
-* MongoDB is enabled
-* MongoDB is listening on 27017 by default
-* MongoDB is listening on 0.0.0.0 by default
+* MongoDB is running - TEST COMPLETE
+* MongoDB is enabled - TEST COMPLETE
+* MongoDB is listening on 27017 by default - TEST COMPLETE
+* MongoDB is listening on 0.0.0.0 by default - TEST COMPLETE
 
 Create a recipe that installs and configures this cookbook correctly to pass all these tests.
 
