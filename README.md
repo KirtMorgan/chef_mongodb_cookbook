@@ -1,4 +1,29 @@
-# mongodb
+# Chef Configuration Lab
 
-TODO: Enter the cookbook description here.
+## Timings
 
+60 - 90 Minutes
+
+## Summary
+
+Our Mongo cookbook currently only install mongodb but it is not configured or started. Let's used templates and attributes to configure the cookbook
+
+## Tasks
+
+Add new ChefSpec tests for the following:
+
+* Create a mongod.conf file in /etc/mongod.conf - TEST COMPLETE
+* Create a mongod.service file in /lib/systemd/system/mongod.service - TEST COMPLETE
+* MongoDB service should be enabled
+* MongoDB service should be started
+
+And InSpec tests for the following:
+
+* MongoDB is running
+* MongoDB is enabled
+* MongoDB is listening on 27017 by default
+* MongoDB is listening on 0.0.0.0 by default
+
+Create a recipe that installs and configures this cookbook correctly to pass all these tests.
+
+Use attributes to allow the port number and ip to be configurable.
