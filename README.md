@@ -14,8 +14,8 @@ Add new ChefSpec tests for the following:
 
 * Create a mongod.conf file in /etc/mongod.conf - TEST COMPLETE
 * Create a mongod.service file in /lib/systemd/system/mongod.service - TEST COMPLETE
-* MongoDB service should be enabled
-* MongoDB service should be started
+* MongoDB service should be enabled - TEST COMPLETE
+* MongoDB service should be started - TEST COMPLETE
 
 And InSpec tests for the following:
 
