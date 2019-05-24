@@ -10,8 +10,5 @@ end
 
 describe port(27017) do
   it { should be_listening }
-end
-
-describe http('http://localhost', enable_remote_worker: true) do
-  its('status') { should cmp 502 }
+  its('addresses') { should include '0.0.0.0' }
 end
