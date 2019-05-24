@@ -20,7 +20,7 @@ package 'mongodb-org' do
 end
 service 'mongod' do
   supports status: true, restart: true, reload: true
-  action [:enable, :start]
+  action [:unmask, :enable, :start]
 
 end
 
